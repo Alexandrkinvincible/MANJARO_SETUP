@@ -1,0 +1,45 @@
+# INSTALL PYTHON - https://www.geeksforgeeks.org/how-to-install-pycharm-ide-on-arch-based-linux-distributionsmanjaro/
+Step 1: Update and upgrade your system by running
+$ sudo pacman -Syu
+
+Step 2: Install snap from the official Arch repositories
+$ sudo pacman -S snapd
+
+Step 3: Enable snap by using the systemctl command
+$ sudo systemctl enable –now snapd.socket
+
+Step 4: Create a symbolic link between /var/lib/snapd/snap and /snap to enable classic support
+$ sudo ln -s /var/lib/snapd/snap /snap
+
+Step 5: Verify the installation by running
+$ snap version
+
+Step 6:  Finally, install PyCharm Community Edition using the snap with –classic confinement.
+$ sudo snap install pycharm-community –classic
+
+Uninstallation of PyCharm
+To uninstall PyCharm along with all of its dependencies run:
+$ sudo snap remove pycharm-community  
+
+Step 7: Create new project, then set and enterpreter to the last version of the python which installed by default.
+if not type in terminal:
+$ sudo pacman -Syy python. # it'll install latest verson of the python. 
+
+# INSTALL Python PIP 
+On Arch Linux, open a terminal and type: 
+$ sudo pacman -S python2-pip # for Python 2.x. 
+$ sudo pacman -S python-pip # for Python 3.x installations
+
+# INSTALL HTMLTestRunneR - https://pypi.org/project/HTMLTestRunner-rv/
+$ pip install HTMLTestRunner-rv
+
+# INSTALL Seleniumwire - https://pypi.org/project/selenium-wire/
+$ pip install selenium-wire
+
+# INSTALL SELENIUM WEBDRIVERS 
+STEP 1: Download webdrivers
+Chrome:https://sites.google.com/a/chromium.org/chromedriver/downloads
+
+Edge:https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+
+Firefox:https://github.com/mozilla/geckodriver/releasesSafari:https://webkit.org/blog/6900/webdriver-support-in-safari-10/
