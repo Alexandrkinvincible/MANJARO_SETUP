@@ -36,7 +36,7 @@ $ pip install HTMLTestRunner-rv
 # INSTALL Seleniumwire - https://pypi.org/project/selenium-wire/
 $ pip install selenium-wire
 
-# INSTALL SELENIUM WEBDRIVERS 
+# INSTALL SELENIUM WEBDRIVERS  - https://medium.com/technowriter/install-selenium-on-mac-os-x-94c7a216aeb0
 STEP 1: Download webdrivers
 Chrome:https://sites.google.com/a/chromium.org/chromedriver/downloads
 
