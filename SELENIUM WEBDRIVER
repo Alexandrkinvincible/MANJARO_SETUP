@@ -43,3 +43,18 @@ Chrome:https://sites.google.com/a/chromium.org/chromedriver/downloads
 Edge:https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
 
 Firefox:https://github.com/mozilla/geckodriver/releasesSafari:https://webkit.org/blog/6900/webdriver-support-in-safari-10/
+
+STEP 2: Unzip to /tmp/
+$ unzip chromedriver_linux64.zip -d /tmp/    - for chrome driver
+$ unzip edgedriver_linux64.zip -d /tmp/      - for edge driver
+$ tar -xzf geckodriver-v0.33.0-linux-aarch64.tar.gz -d /tmp/   - for gecko driver
+
+STEP 3: Add files to $PATH
+$ sudo chown -R root:root /tmp/geckodriver*
+$ sudo mv /tmp/geckodriver* /usr/local/bin/
+
+$ sudo chown -R root:root /tmp/chromedriver*
+$ sudo mv /tmp/chromedriver* /usr/local/bin/
+
+$ sudo chown -R root:root /tmp/edgedriver*
+$ sudo mv /tmp/edgedriver* /usr/local/bin/
