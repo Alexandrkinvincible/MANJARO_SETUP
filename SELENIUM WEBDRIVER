@@ -1,4 +1,8 @@
-# INSTALL PYTHON - https://www.geeksforgeeks.org/how-to-install-pycharm-ide-on-arch-based-linux-distributionsmanjaro/
+more about selenium here  - https://github.com/SergioUS/SeleniumWebdriverPython_test.git
+
+######################
+### INSTALL PYTHON ###- https://www.geeksforgeeks.org/how-to-install-pycharm-ide-on-arch-based-linux-distributionsmanjaro/
+######################
 Step 1: Update and upgrade your system by running
 $ sudo pacman -Syu
 
@@ -17,26 +21,42 @@ $ snap version
 Step 6:  Finally, install PyCharm Community Edition using the snap with –classic confinement.
 $ sudo snap install pycharm-community –classic
 
-Uninstallation of PyCharm
-To uninstall PyCharm along with all of its dependencies run:
-$ sudo snap remove pycharm-community  
-
 Step 7: Create new project, then set and enterpreter to the last version of the python which installed by default.
 if not type in terminal:
-$ sudo pacman -Syy python. # it'll install latest verson of the python. 
 
-# INSTALL Python PIP 
+--------------------------------------------------------------------------
+| Uninstallation of PyCharm                                              | 
+| To uninstall PyCharm along with all of its dependencies run:           |  
+| $ sudo snap remove pycharm-community                                   |
+| $ sudo pacman -Syy python. # it'll install latest verson of the python | 
+--------------------------------------------------------------------------
+
+##########################
+### INSTALL Python PIP ###
+##########################
+
 On Arch Linux, open a terminal and type: 
 $ sudo pacman -S python2-pip # for Python 2.x. 
 $ sudo pacman -S python-pip # for Python 3.x installations
 
-# INSTALL HTMLTestRunneR - https://pypi.org/project/HTMLTestRunner-rv/
+##############################
+### INSTALL HTMLTestRunneR ###  - https://pypi.org/project/HTMLTestRunner-rv/
+##############################
+
 $ pip install HTMLTestRunner-rv
 
-# INSTALL Seleniumwire - https://pypi.org/project/selenium-wire/
+
+############################
+### INSTALL Seleniumwire ### - https://pypi.org/project/selenium-wire/
+############################
+
 $ pip install selenium-wire
 
-# INSTALL SELENIUM WEBDRIVERS  - https://medium.com/technowriter/install-selenium-on-mac-os-x-94c7a216aeb0
+
+###################################
+### INSTALL SELENIUM WEBDRIVERS ###  - https://medium.com/technowriter/install-selenium-on-mac-os-x-94c7a216aeb0
+###################################
+
 STEP 1: Download webdrivers
 Chrome:https://sites.google.com/a/chromium.org/chromedriver/downloads
 
