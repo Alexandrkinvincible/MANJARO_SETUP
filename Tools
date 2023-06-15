@@ -1,3 +1,33 @@
 ###############
 ### POSTMAN ### - 
 ###############
+
+Step 1: Update and upgrade our system by executing:
+$ sudo pacman -Syu
+
+Step 2: Download the latest available package for Linux by visiting 
+https://www.postman.com/downloads/.
+
+Step 3: Move into our browser’s default download directory and unzip the postman tar file.
+$ cd ~/Downloads 
+$ tar -xzf postman-linux-x64.tar.gz 
+
+Step 4: Relocate the extracted folder into the /opt directory.
+sudo mv Postman /opt
+
+Step 5: Create a symlink to launch Postman from the shell. 
+sudo ln -s /opt/Postman/Postman /usr/local/bin/postman
+
+Step 6: Now create a new .desktop file to start them by clicking on a launcher icon.
+sudo nano /usr/share/applications/postman.desktop
+
+Step 7: Copy and paste the following.
+[Desktop Entry]
+Type=Application
+Name=Postman
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Exec=”/opt/Postman/Postman”
+Comment=Postman Desktop App
+Categories=Development;Code;
+
+Step 8: Search “Postman” in the application manager to launch the application.
