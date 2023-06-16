@@ -1,7 +1,56 @@
 #######################
 ### BLUETOOTH SETUP ### - https://linuxhint.com/configure_bluetooth_arch_linux/
 #######################
+*** MAIN SETUP ***
+To set up Bluetooth on Arch Linux, you can follow these steps:
 
+1. Install Bluetooth packages: 
+$ sudo pacman -S bluez bluez-utils
+This command installs the BlueZ Bluetooth stack and utility tools.
+
+2. Start and enable the Bluetooth service: Use the following commands to start the Bluetooth service and enable it to start automatically on system boot:
+$ sudo systemctl start bluetooth
+$ sudo systemctl enable bluetooth
+
+3. Verify Bluetooth service status: To check if the Bluetooth service is running, use the command:
+$ systemctl status bluetooth
+Ensure that the status shows "active" or "running".
+
+4. Turn on Bluetooth: Use the following command to enable Bluetooth:
+$ bluetoothctl power on
+This command turns on the Bluetooth radio.
+
+5. Scan and pair devices: Use the following commands to scan for nearby Bluetooth devices and initiate the pairing process:
+$ bluetoothctl scan on
+This command starts scanning for nearby devices. Once you identify the device you want to pair with, note its MAC address.
+$ bluetoothctl pair <device_mac_address>
+Replace <device_mac_address> with the actual MAC address of the device you want to pair with.
+
+6. Connect to paired devices: After successfully pairing a device, you can use the following command to connect to it:
+$ bluetoothctl connect <device_mac_address>
+Replace <device_mac_address> with the MAC address of the paired device.
+-----------------------------------------------------------------------------------------------------------------------------------------
+| If Bluetooth discovers the device but fails to establish a connection, you can try the following troubleshooting steps on Arch Linux: |
+-----------------------------------------------------------------------------------------------------------------------------------------
+1. Ensure the device is in pairing mode: Some Bluetooth devices require you to put them in pairing mode before they can be connected. Refer to the device's documentation to learn how to enable pairing mode.
+2. Remove previous pairings: If you have previously paired the device but can't connect to it now, remove the device from your Bluetooth settings and try pairing it again. Use the following command to remove a device:
+$ bluetoothctl remove <device_mac_address>
+Replace <device_mac_address> with the MAC address of the device you want to remove.
+
+3. Restart the Bluetooth service: Restarting the Bluetooth service can sometimes resolve connectivity issues. Use the following commands to restart the service:
+$ sudo systemctl restart bluetooth
+
+4. Disable power management for Bluetooth: Power management settings can sometimes interfere with Bluetooth connections. Disable power management for Bluetooth by adding the following line to the /etc/bluetooth/main.conf file:
+$ cd /etc/bluetooth/
+$ sudo nano main.conf
+Disable=Socket    # add this line to the end of the file
+
+Save the file and restart the Bluetooth service:
+$ sudo systemctl restart bluetooth
+
+Then continue with step 5,6 of the MAIN SETUP
+
+5. Check for firmware or driver issues: Some Bluetooth devices may require additional firmware or drivers to work correctly. Check the Arch Linux wiki or the manufacturer's website for any specific instructions or firmware updates related to your device.
 
 ###############
 ### POSTMAN ### - 
