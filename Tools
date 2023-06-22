@@ -52,6 +52,9 @@ Then continue with step 5,6 of the MAIN SETUP
 
 5. Check for firmware or driver issues: Some Bluetooth devices may require additional firmware or drivers to work correctly. Check the Arch Linux wiki or the manufacturer's website for any specific instructions or firmware updates related to your device.
 
+
+Additional step, install Blueberry app for easy way managing bluetooth devices.
+
 ###############
 ### POSTMAN ### - 
 ###############
